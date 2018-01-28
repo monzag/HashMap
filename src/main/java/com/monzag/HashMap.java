@@ -60,5 +60,16 @@ public class HashMap {
         }
     }
 
-
+    @Override
+    public String toString() {
+        String result = "";
+        for (LinkedList<KeyValue> box : elements) {
+            if (box != null) {
+                for (KeyValue pair : box) {
+                    result += pair.key + ":" + pair.value + " ";
+                }
+            }
+        }
+        return result;
+    }
 }
