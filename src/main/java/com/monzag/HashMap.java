@@ -37,4 +37,14 @@ public class HashMap {
         throw new NullPointerException();
     }
 
+    public void remove(String key) {
+        int position = getHash(key);
+        LinkedList<KeyValue> list = elements[position];
+        for (KeyValue pair : list) {
+            if (pair.key == key) {
+                list.remove(pair);
+            }
+        }
+    }
+
 }
