@@ -18,7 +18,11 @@ public class HashMap {
         }
 
         list.add(new KeyValue(key,value));
-        resizeIfNeeded();
+//        resizeIfNeeded();
+    }
+
+    public Integer getHash(String key) {
+        return Math.abs(key.hashCode()) % size;
     }
 
 }
