@@ -47,4 +47,12 @@ public class HashMap {
         }
     }
 
+    public void clearAll() {
+        for (LinkedList<KeyValue> box : elements) {
+            for (KeyValue pair : box) {
+                remove(pair.key);
+            }
+        }
+    }
+
 }
