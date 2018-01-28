@@ -10,10 +10,15 @@ public class HashMap {
     public void put(String key, Integer value) {
         int position = getHash(key);
         LinkedList<KeyValue> list = elements[position];
-
-        for (KeyValue pair : list) {
-            if (pair.key == key) {
-                throw new IllegalArgumentException();
+        if (list == null) {
+            list = new LinkedList<KeyValue>();
+            elements[position] = list;
+        }
+        else {
+            for (KeyValue pair : list) {
+                if (pair.key.equals(key)) {
+                    throw new IllegalArgumentException();
+                }
             }
         }
 
@@ -54,5 +59,6 @@ public class HashMap {
             }
         }
     }
+
 
 }
