@@ -25,4 +25,16 @@ public class HashMap {
         return Math.abs(key.hashCode()) % size;
     }
 
+    public Integer getValue(String key) {
+        int position = getHash(key);
+        LinkedList<KeyValue> list = elements[position];
+        for (KeyValue pair : list) {
+            if (pair.key == key) {
+                return pair.value;
+            }
+        }
+
+        throw new NullPointerException();
+    }
+
 }
