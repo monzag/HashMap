@@ -7,7 +7,7 @@ public class HashMap {
     private int size = 16;
     private LinkedList<KeyValue>[] elements = new LinkedList[size];
 
-    public void add(String key, Integer value) {
+    public void put(String key, Integer value) {
         int position = getHash(key);
         LinkedList<KeyValue> list = elements[position];
 
