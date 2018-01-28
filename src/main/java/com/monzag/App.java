@@ -9,6 +9,5 @@ public class App
         map.put("two", 2);
         map.put("three", 3);
         System.out.println("Map: " + map.toString());
-        
     }
 }
