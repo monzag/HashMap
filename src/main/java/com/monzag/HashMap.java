@@ -54,8 +54,10 @@ public class HashMap {
 
     public void clearAll() {
         for (LinkedList<KeyValue> box : elements) {
-            for (KeyValue pair : box) {
-                remove(pair.key);
+            if (box != null) {
+                for (KeyValue pair : box) {
+                    remove(pair.key);
+                }
             }
         }
     }
