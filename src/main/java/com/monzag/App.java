@@ -9,5 +9,13 @@ public class App
         map.put("two", 2);
         map.put("three", 3);
         System.out.println("Map: " + map.toString());
+
+        map.remove("two");
+        System.out.println("Map: " + map.toString());
+
+        System.out.println("Value: " + map.getValue("one"));
+
+        map.clearAll();
+        System.out.println("Map: " + map.toString());
     }
 }
